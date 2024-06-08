@@ -1,0 +1,769 @@
+{
+	"info": {
+		"_postman_id": "82de3eda-1d43-4fb1-bb8b-398e21c82cf4",
+		"name": "ECOMMERCE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8327926"
+	},
+	"item": [
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "REGISTER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "firstname",
+									"value": "iskandar",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "zulkarnain",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "iskandar",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "iskandar@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "JL.Damai Rt.09/05",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8282/api/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "iskandar",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/api/user/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL USER",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/user",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RESET PASSWORD",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/user/reset-password/3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"reset-password",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET BY ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imlza2FuZGFyQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiaXNrYW5kYXIiLCJpYXQiOjE3MTc2OTE2NDMsImV4cCI6MTcxNzY5NTI0M30.zDAwhOYNCbtuU6FTOSckhRPo-OclT3n2rSX7Cem7bII",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/user/3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE USER",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "firstname",
+									"value": "iskandars",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "zulkar",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/api/user/3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/user/3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CATEGORY PRODUCT",
+			"item": [
+				{
+					"name": "GET  ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/category-product/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"category-product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/category-product/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"category-product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama_category",
+									"value": "Makanan",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/api/category-product/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"category-product",
+								"1"
+							],
+							"query": [
+								{
+									"key": "nama_category",
+									"value": "Makanan",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET BY ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imlza2FuZGFyQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiaXNrYW5kYXIiLCJpYXQiOjE3MTc2NjcxMDYsImV4cCI6MTcxNzY3MDcwNn0.yQxdvP5xQU9ovh5EWi2umlwEmWH-8vsSrn4NstZc6XA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/category-product/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"category-product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PRODUCT",
+			"item": [
+				{
+					"name": "GET  ALL",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imlza2FuZGFyQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiaXNrYW5kYXIiLCJpYXQiOjE3MTc2OTE2NDMsImV4cCI6MTcxNzY5NTI0M30.zDAwhOYNCbtuU6FTOSckhRPo-OclT3n2rSX7Cem7bII",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/product/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imlza2FuZGFyQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiaXNrYW5kYXIiLCJpYXQiOjE3MTc4MDE4OTIsImV4cCI6MTcxNzg4ODI5Mn0.sfhbC-BVbJZwuD5h2Ijsgk_MgmINpQQJSb2dWegZmek",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{URL}}/api/product/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama_category",
+									"value": "Makanan",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/api/product/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"1"
+							],
+							"query": [
+								{
+									"key": "nama_category",
+									"value": "Makanan",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET BY ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imlza2FuZGFyQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiaXNrYW5kYXIiLCJpYXQiOjE3MTc2NjcxMDYsImV4cCI6MTcxNzY3MDcwNn0.yQxdvP5xQU9ovh5EWi2umlwEmWH-8vsSrn4NstZc6XA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/product/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CHART",
+			"item": [
+				{
+					"name": "GET  ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/product/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/product/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama_category",
+									"value": "Makanan",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/api/product/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"1"
+							],
+							"query": [
+								{
+									"key": "nama_category",
+									"value": "Makanan",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET BY ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imlza2FuZGFyQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiaXNrYW5kYXIiLCJpYXQiOjE3MTc2NjcxMDYsImV4cCI6MTcxNzY3MDcwNn0.yQxdvP5xQU9ovh5EWi2umlwEmWH-8vsSrn4NstZc6XA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/product/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ORDER",
+			"item": [
+				{
+					"name": "GET  ALL",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imlza2FuZGFyQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiaXNrYW5kYXIiLCJpYXQiOjE3MTc2OTYxMDAsImV4cCI6MTcxNzY5OTcwMH0.ermRqFedYpFeMYjplAzkXpAt2YqhXqLqRGGeJfSrd50",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/order/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"order",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imlza2FuZGFyQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiaXNrYW5kYXIiLCJpYXQiOjE3MTc2OTYxMDAsImV4cCI6MTcxNzY5OTcwMH0.ermRqFedYpFeMYjplAzkXpAt2YqhXqLqRGGeJfSrd50",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    [\r\n        {\r\n    \"id_orders\": 1,\r\n    \"id_user\": \"3\",\r\n    \"id_product\": \"1\",\r\n    \"total_harga\": \"6000\",\r\n},\r\n{\r\n    \"id_orders\": 1,\r\n    \"id_user\": \"3\",\r\n    \"id_product\": \"1\",\r\n    \"total_harga\": \"6000\",\r\n}\r\n\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/order/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"order",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama_category",
+									"value": "Makanan",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/api/product/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"1"
+							],
+							"query": [
+								{
+									"key": "nama_category",
+									"value": "Makanan",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET BY ID Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imlza2FuZGFyQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiaXNrYW5kYXIiLCJpYXQiOjE3MTc2NjcxMDYsImV4cCI6MTcxNzY3MDcwNn0.yQxdvP5xQU9ovh5EWi2umlwEmWH-8vsSrn4NstZc6XA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/product/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ORDER HISTORY",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imlza2FuZGFyQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiaXNrYW5kYXIiLCJpYXQiOjE3MTc2OTYxMDAsImV4cCI6MTcxNzY5OTcwMH0.ermRqFedYpFeMYjplAzkXpAt2YqhXqLqRGGeJfSrd50",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/order-history/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"order-history",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
